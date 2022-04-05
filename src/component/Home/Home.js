@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import Review from '../Review/Review';
 
+
 const Home = () => {
     const [reviews, setReviews] = useState([]);
+    // const [review, setReview] = useState();
 
     useEffect(() => {
-        fetch('https://my-json-server.typicode.com/mamaruf04/mockjson/posts')
+        fetch('https://my-json-server.typicode.com/mamaruf04/mockjson/profile')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
+
+    // for (const sinReview of reviews) {
+    //     setReview(sinReview); 
+    // }
 
     return (
         <div>
@@ -21,10 +27,14 @@ const Home = () => {
                 </div>
             </div>
             <div>
-            <div>
-                {reviews.map(review => <Review key={review.id} review={review}></Review>)}
+                {/* {reviews.map((review, id) => (
+                    <Review key={id} review={review} />
+                ))} */}
+                <Review id='fkfkfk'></Review>
+                {/* <Review review={review}>
+                    <button onClick={()=>navigate('/review')}>See all reviews </button>
+                <Review/> */}
             </div>
-        </div>
         </div>
     );
 };

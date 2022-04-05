@@ -1,10 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Review = (props) => {
-    console.log(props.review);
+    // const navigate = useNavigate();
+    // const { name, img, ratings, id, comment } = review;
+    // console.log(name)
     return (
         <div>
-            {/* <h4>{props.review.id}</h4> */}
+            <div>
+                <div>
+                    <h3>review area: {props.id}</h3>
+                </div>
+            </div>
+            
         </div>
     );
 };
