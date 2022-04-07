@@ -1,18 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import ReviewDisplay from './ReviewDisplay';
+// import { useNavigate } from 'react-router-dom';
 
-const Review = (props) => {
-    // const navigate = useNavigate();
-    // const { name, img, ratings, id, comment } = review;
-    // console.log(name)
+const Review = () => {
+    const [mainReviews , setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('https://my-json-server.typicode.com/mamaruf04/mockjson/profile')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
     return (
         <div>
             <div>
-                <div>
-                    <h3>review area: {props.id}</h3>
-                </div>
+                {
+                    mainReviews.map((review,id)=><ReviewDisplay review={review} key={id}> </ReviewDisplay>)
+                }
             </div>
-            
         </div>
     );
 };

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Review from '../Review/Review';
+import HomeReview from './HomeReview/HomeReview';
 
 
 const Home = () => {
     const [reviews, setReviews] = useState([]);
-    // const [review, setReview] = useState();
 
     useEffect(() => {
         fetch('https://my-json-server.typicode.com/mamaruf04/mockjson/profile')
@@ -12,28 +11,28 @@ const Home = () => {
             .then(data => setReviews(data))
     }, [])
 
-    // for (const sinReview of reviews) {
-    //     setReview(sinReview); 
-    // }
 
     return (
         <div>
             <div className='d-flex align-items-center justify-content-center container mt-5'>
                 <div>
                     <h1 className='display-4 fw-bold'>Welcome to our <span className='text-info'>Quality Home</span> </h1>
+                    <p>A product is known as a quality product only when it satisfies various criteria for its functioning for the consumer. In addition to the physical criteria.</p>
                 </div>
-                <div className='img-fluid'>
+                {/* <div className='img-fluid'>
                     <img src="https://cutt.ly/RD5YBua" alt="" />
+                </div> */}
+                <div className='img-fluid'>
+                    <img src="https://www.linkpicture.com/q/laptop_3.png" alt="" />
                 </div>
             </div>
             <div>
-                {/* {reviews.map((review, id) => (
-                    <Review key={id} review={review} />
-                ))} */}
-                <Review id='fkfkfk'></Review>
-                {/* <Review review={review}>
-                    <button onClick={()=>navigate('/review')}>See all reviews </button>
-                <Review/> */}
+                {
+                    // reviews.length && (
+                    //     reviews.map((review,id)=><HomeReview review={review} key={id}/>)
+                    // )
+                    reviews.map((review, id) => <HomeReview review={review} key={id}> </HomeReview>)
+                }
             </div>
         </div>
     );
