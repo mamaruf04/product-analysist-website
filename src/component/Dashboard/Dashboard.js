@@ -1,5 +1,6 @@
 import React from 'react';
 import {Bar, BarChart, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import "./Dashboard.css"
 
 const Dashboard = () => {
     const data = [
@@ -41,17 +42,17 @@ const Dashboard = () => {
         }
     ]
     return (
-        <div className='dashboard'>
-            <div>
-                <BarChart width={800} height={400} data={data}>
+        <div className='dashboard container gap-4'>
+            <div className='shadow-lg border border-lg p-4'>
+                <BarChart width={600} height={400} data={data}>
                     <Bar dataKey="sell" fill="#8884d8" />
                     <XAxis dataKey="month"></XAxis>
                     <YAxis dataKey="sell"></YAxis>
                     <Tooltip />
                 </BarChart>
             </div>
-            <div>
-                <LineChart width={800} height={500} data={data}>
+            <div className='shadow-lg border border-lg p-4'>
+                <LineChart width={600} height={400} data={data}>
                     <Line dataKey={'investment'}></Line>
                     <Line dataKey={'sell'}></Line>
                     <Line dataKey={'revenue'}></Line>
