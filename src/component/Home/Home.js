@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import HomeReview from './HomeReview/HomeReview';
+import { useNavigate } from "react-router-dom";
+import './Home.css';
 
 
 const Home = () => {
+    const navigate = useNavigate();
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
@@ -34,6 +37,9 @@ const Home = () => {
                     reviews.map((review, id) => <HomeReview review={review} key={id}> </HomeReview>)
                 }
             </div>
+            <span className='see-all' onClick={() => navigate('/review')}>
+            See All Reviews
+          </span>
         </div>
     );
 };
