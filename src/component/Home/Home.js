@@ -37,9 +37,9 @@ const Home = () => {
                     reviews.map((review, id) => <HomeReview review={review} key={id}> </HomeReview>)
                 }
             </div>
-            <span className='see-all' onClick={() => navigate('/review')}>
+            <h5 className='see-all' onClick={() => navigate('/review')}>
             See All Reviews
-          </span>
+          </h5>
         </div>
     );
 };
