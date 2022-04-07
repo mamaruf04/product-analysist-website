@@ -1,0 +1,22 @@
+.col-size{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgba(252, 230, 160, 0.76);
+    width: 700px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-left: 300px;
+}
+.img-size{
+    width: 180px;
+    height: 190px;
+    border-radius: 50%;
+    margin-left: 60px;
+    padding: 5px;
+}
+.card-details{
+    margin-top: 20px;
+    padding-left: 0;
+    margin-left: -60px;
+    
+}

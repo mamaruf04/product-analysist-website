@@ -17,14 +17,14 @@ const Home = () => {
             <div className='d-flex align-items-center justify-content-center container mt-5'>
                 <div>
                     <h1 className='display-4 fw-bold'>Welcome to our <span className='text-info'>Quality Home</span> </h1>
-                    <p>A product is known as a quality product only when it satisfies various criteria for its functioning for the consumer. In addition to the physical criteria.</p>
+                    <p className='text-muted fs-5'>A product is known as a quality product only when it satisfies various criteria for its functioning for the consumer. In addition to the physical criteria.</p>
                 </div>
-                {/* <div className='img-fluid'>
-                    <img src="https://cutt.ly/RD5YBua" alt="" />
-                </div> */}
                 <div className='img-fluid'>
                     <img src="https://www.linkpicture.com/q/laptop_3.png" alt="" />
                 </div>
+            </div>
+            <div>
+                <h1 className='text-center m-4 mb-5 fw-bold'>Customer Review (3)</h1>
             </div>
             <div>
                 {
